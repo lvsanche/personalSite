@@ -7,29 +7,93 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
     <body>
-        <div class="header">
-            <nav>
-                <div class="nav-links float-right">
-                    <a href="/">Home</a>
-                    <a href="/about.html">About</a>
-                    <a href="/resume.html">Resume</a>
-                    
-                </div>
+
+        <div id="test" class="hero-image">
+            <div class="hero-text">
+                Hi, I'm Luis.
+            </div>
+        </div>
+        <div class="navSpacer">
+            <nav id="nav" class="main-nav">
+                    <div class="nav-links">
+                        <a href="#about">About</a>
+                        <a href="#sideProjects">Side Projects</a>
+                        <a href="#resume">Resume</a>
+                        <a href="#contact">Contact</a> 
+                    </div>
             </nav>
         </div>
-        <main>
-                <div class="hero-image">
-                    <div class="hero-text">
-                        Hi, I'm Luis.
-                    </div>
-                </div>
-        </main>
-        <div class="footer">
+        
+        <section id="about" class="full-view">
+            <h1>Background on Luis</h1>
+            <div>
+                <p>I'm Luis, San Diego raised, and proudly Mexican-American. Grew up in a Spanish speaking house hold.
+                    From a young age I was fascinated with science, getting my hands on experiment kits was a treat.
+                    Growing up in the age of "early" (by my approximation) Youtube and dial up was incredible. My imagination
+                    grew wild with every visit to the world wide web. By the time senior year rolled around, I was dead set
+                    on becoming a scientist. I already knew which university I was going to attend, University of California, San Diego.
+                    I applied as a NanoEngineer major, a perfect blend of chemistry and engineering put into practice in order to solve
+                    this century's problems. The program at UCSD wasn't even certified.
+                </p>
+                <p>
+                    It was almost the end of my second year when I took Nano15, an introductory course to MatLab that would change my
+                    life. The third year hadn't started before I began my pursuit of a Computer Engineering degree. Again a mixture in disciplines,
+                    this time electrical engineering and computer software. Unbeknownst to me, I would graduate being mediocre at both.
+                    Finding it difficult to design low level chips in VHDL and not having taken any practical software courses like databases,
+                    or web design.  
+                </p>
+                <p>
+                    Luckily, classes weren't the only thing I did during my time at UCSD. During my first year as a Computer Eng. major, I applied
+                    and entered a newly created "Early Research Scholars Program". I was fortunate enough to research among graduate students and professors
+                    that sparked a deeper curiosity     for how computers, software and networks work, how they could be improved and how we should interact with them. 
+                </p>
+                <p>
+                    My first year of research involved testing and probing the cloud computing solutions offered by Amazon, Goolge and Microsoft.
+                    During the year, I learned to search for better questions, to aggregate, to present and to interpret data and its significance.
+                    Thanks to ERSP was able to continue doing research with professors I met. I continued automating and helping build frameworks
+                    that would facilitate data gathering and data graphing for a graduate student that was testing optical circuit switches.
+                </p>
+                <p>
+                    My career is young and after reflecting over what I've accomplished, I am starting to set goals for the rest of my life.
+                </p>
+            </div>
+        </section>
+        <section id="sideProjects">
+            <h1>Side Projects</h1>
+            <div class="full-view">
+                <h2>Project Kiwi</h2>
+                <p>What started as a fun way to learn React turned into a student process tracking web application</p>
+            </div>
+
+            <div class="full-view">
+                <h2>Project Raspberry</h2>
+                <p>Even though creating something useful and learning a lot of JavaScript as I created Project Kiwi, I wanted to try
+                    and create something from scratch. I wanted to learn NodeJS, and use no framework. The projects goal is to 
+                    allow me to easily categorize and save recipes that I take from websites and add them to a meal planning 
+                    calendar, allow me to aggregate my shopping list for the week and just make the whole shopping and meal planning
+                    process easier. Project is in infant state, currently only have the calendar view and the parsing of some websites working.
+                </p>
+            </div>
+        </section>
+        <section id="resume">
+            <p>Work In Progress</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Work In Progress</p>
+        </section>
+    
+        <div id="footer" class="footer">
             <div class="social-media-links">
                 <div class="icon-background">
                     <a href="https://www.linkedin.com/in/lvsanche/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+                <div class="icon-background">
+                    <a href="https://www.github.com/lvsanche/"><i class="fab fa-github-square"></i></a>
+                </div>
             </div>
         </div>
     </body>
+    <script src="/js/main.js"></script>
 </html>

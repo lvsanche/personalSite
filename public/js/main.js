@@ -19,6 +19,31 @@ function handleNavBarWhenScrolling() {
     
 }
 
+function handleNavButtonPress() {
+    
+    var navLinks = document.getElementById('navLinks');
+    
+    if(navLinks.classList.contains('show')){
+        navLinks.classList.remove('show');
+        document.getElementById('toggle-menu').innerHTML = "<i class='fas fa-bars'></i>";
+        console.log('notshowing')        
+    }
+    else {
+        
+        navLinks.classList.add('show');
+        //add event listener to all buttons
+        navLinks.childNodes.forEach(element => {
+            element.addEventListener('click', handleNavButtonPress);
+        });
+
+        //add X instead of bars
+        document.getElementById('toggle-menu').innerHTML = '<i class="fas fa-times"></i>';
+        console.log('showing')
+    }
+}
+
 window.addEventListener('load', function (){
     window.addEventListener('scroll', handleNavBarWhenScrolling);
 })
+
+document.getElementById('toggle-menu').addEventListener('click', handleNavButtonPress);

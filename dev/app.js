@@ -4,7 +4,7 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
-http.createServer(app).listen(8080, '127.0.0.1');
+http.createServer(app).listen(8080, '192.168.0.168');
 
 
 function app (req, res){

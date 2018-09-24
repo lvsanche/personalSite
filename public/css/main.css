@@ -21,6 +21,7 @@ a {
 
 p {
     font-size: 2em;
+    line-height: 1.25;
 }
 
 h1, h2 {
@@ -125,6 +126,11 @@ h1, h2 {
         height: 100%;
         position: fixed;
     }
+
+    p {
+        font-size: 4em;
+        line-height: 1.5;
+    }
 }
 
 .show {
@@ -185,5 +191,6 @@ h1, h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3em;
+    font-size: 6em;
+    width: 100vw;
 }

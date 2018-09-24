@@ -1,8 +1,9 @@
 body {
-    background-color: black;
+    background: linear-gradient(black,#D3D3D3);
     color: white;
     margin: 0;
     font-size: 2vw;
+    overflow-x: hidden;
 }
 main {
     background-color: white;
@@ -22,10 +23,12 @@ a {
 p {
     font-size: 2em;
     line-height: 1.25;
+    margin: 0.25em;
 }
 
 h1, h2 {
     font-size: 5em;
+    text-align: center;
 }
 .full-view{
     min-height: 100vh;
@@ -146,31 +149,29 @@ h1, h2 {
 
 /*Footer CSS*/
 .footer {
-    border: 1px solid white;
-    max-width: 960px;
-    margin: auto;
     display: flex;
     align-content: center;
     flex-direction: column;
-    padding: 10px;
     box-sizing: border-box;
+    background-color: black;
+    height: 15vh;
+    padding: 5vh;
 }
 
 .social-media-links {
     display: flex;
     justify-content: space-around;
 }
-.icon-background {
-    border-radius: 50%;
-    background-color: white;
-    height: 40px;
-    width: 40px;
+
+.social-media-links div {
+    height: 7vh;
+    width: 6vw;
 }
-.icon-background a {
-    color: black;
+
+.icon {
+    color: white;
     text-align: center;
     font-size: 2em;
-    padding-left: 7px;
 }
 
 
@@ -193,4 +194,9 @@ h1, h2 {
     color: white;
     font-size: 6em;
     width: 100vw;
+}
+
+/*Themes */
+.dark-theme {
+    color: black;
 }

@@ -15,7 +15,7 @@ div, main, header {
     display: block;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: white;
 }
@@ -199,4 +199,8 @@ h1, h2 {
 /*Themes */
 .dark-theme {
     color: black;
+}
+
+.light-theme {
+    color: white;
 }

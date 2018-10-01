@@ -219,9 +219,9 @@ h3 {
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/img/hero-small.jpg");
     height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     position: relative;
 }
 
@@ -234,6 +234,20 @@ h3 {
     color: white;
     font-size: 6em;
     width: 100vw;
+}
+
+/*Container to center items*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 10vh;
+}
+
+/*Link Mods*/
+.cleanLink {
+    text-decoration: none;
+    font-size: 2em;
 }
 
 /*Themes */

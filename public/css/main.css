@@ -217,7 +217,7 @@ h3 {
 
 /*Home Page*/
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/img/hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/img/hero-small.jpg");
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;

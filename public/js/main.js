@@ -1,3 +1,18 @@
+function animateLoading() {
+    // document.getElementById('transition-container').classList.add('animate');
+    setTimeout(removeLoader, 3000);
+}
+
+function removeLoader (){
+    // document.getElementById('transition-container').style.display = 'none';
+   
+    // var elm = document.getElementsByClassName('loader')
+    // // for(var i = 0; i < elm.length; i++){
+    // //     elm[i].style.display = 'none';
+    // // }
+    document.getElementById('content').style.display = 'block';
+}
+
 function checkVisible(elm) {
     var rect = elm.getBoundingClientRect();
     var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);

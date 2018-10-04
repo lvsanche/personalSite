@@ -1,35 +1,39 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/*Whole elements*/
 body {
     background: #544B3D;
     color: #FCF7F8;
     margin: 0;
     font-size: 2vw;
     overflow-x: hidden;
-    font-family: 'Poppins', 'Muli', sans-serif;
+    font-family: 'Saira Extra Condensed','Poppins', 'Muli', sans-serif;
+    letter-spacing: 1px;
 }
+
 main {
     background-color: white;
     max-width: 100%;
     margin: auto;
     color: black;
 }
+
 div, main, header {
     display: block;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
+p {
+    font-size: 1em;
+    line-height: 1.25;
+    margin: 0.25em;
 }
 
 ul {
     list-style: none;
-    padding: 0;
-}
-
-p, li {
-    font-size: 2em;
-    line-height: 1.25;
-    margin: 0.25em;
 }
 
 h1 {
@@ -45,85 +49,45 @@ h3 {
     font-size: 3em;
     text-align: center;
 }
+a{
+    color: white;
+}
+
+/*Sections*/
 .full-view{
-    min-height: 100vh;
-    padding: 0 1em;
-}
-/* Scrolling style */
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
+    /* min-height: 100vh; */
+    padding: 0 5vw;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
-    background: white;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: black; 
-    height: 40px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: white; 
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-.main-nav {
-    width: 100%;
-    height: 20vh;
-    position: relative;
-    top: -20vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
-}
-
-.test {
+.accent {
     border-left: 5px solid #7CFFC4;
     background: rgba(182, 175, 164, 0.6);
     padding: 0.25em;
 }
-.top {
-    top: 0;
-}
 
-.center {
-    text-align: center;
-}
-.float-right {
-    float: right;
-}
-
-.float-left {
-    float: left;
-}
-
-/*MENU CSS*/
+/*Navigation*/
 .nav-links {
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    padding: 1em;
-}
-.nav-links a {
-    margin: 0.5em;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
+    justify-content: space-around;
+    width: 60%;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .nav-links li {
-    display: inline-flex;
+	display: inline-flex;
 }
-.nav-links li a::after {
+
+.nav-links a {
+	position: relative;
+	padding: 1rem 0 0.5rem;
+	margin: 0 1.5rem;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav-links a::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -135,26 +99,28 @@ h3 {
     background-color: rgba(255,255,255,0.8);
     transition: transform 250ms;
 }
-	
+
 .nav-links a:hover::after {
-	transform: translateX(-50%) scaleX(1);	
-}
-
-.navAnchor {
-    position: relative;
-    top: -20vh;
-}
-
-.stick-top {
-    position: fixed;
-    top: 0;
-    transition: all 0.5s ease;
+	transform: translateX(-50%) scaleX(1);
 }
 
 .navSpacer{
     height: 10vh;
 }
 
+.navAnchor {
+    position: relative;
+    top: -12vh;
+}
+
+.main-nav {
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0vh;
+}
+
+/*Menu for mobile*/
 .menu-bar {
     position: fixed;
     font-size: 6vh;
@@ -165,6 +131,35 @@ h3 {
 }
 
 
+/*Hero Image*/
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/img/hero-small.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition-property: display;
+    transition-timing-function: linear;
+    transition-duration: 10s;
+}
+
+#content {
+    display: none;
+    
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 6em;
+    width: 100vw;
+}
+
 /*Header CSS*/
 .header {
     height: 10%;
@@ -174,6 +169,161 @@ h3 {
     box-sizing: border-box;
 }
 
+/*Footer CSS*/
+.footer {
+    box-sizing: border-box;
+    background-color: black;
+    height: 45vh;
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+/*List modifications*/
+.center {
+    text-align: center;
+}
+
+.cleanLink {
+    text-decoration: none;
+    color: white;
+}
+
+/*Social media links*/
+.social-media-links {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.social-media-links a {
+    text-decoration: none;
+}
+
+.stick-top {
+    position: fixed;
+    top: 0;
+    transition-property: background; 
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+}
+
+/*Two cols */
+.two-cols {
+    display: flex;
+    margin: 10vh 0;
+}
+
+.two-cols h2 {
+    flex: 1 0 20vw;
+    font-size: 2em;
+    text-align: left;
+    margin: auto;
+}
+
+.two-cols .stack {
+    flex: 1 0 40vw;
+}
+
+.animate path {
+    transform: translateY(-800px);
+}
+.animate path:nth-of-type(1) {
+    animation: toTop 500ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
+}
+
+.animate path:nth-of-type(2) {
+    animation: toTop 550ms 75ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
+}
+
+.animate path:nth-of-type(3) {
+    animation: toTOP 600ms 150ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
+}
+
+.animate path:nth-of-type(4) {
+    animation: toTop 650ms 225ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
+}
+
+.animate path:nth-of-type(5) {
+    animation: toTop 700ms 300ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
+}
+
+.animate path:nth-of-type(6) {
+    animation: toTop 750ms 375ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
+}
+
+#whole {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #544B30;
+}
+.removeLoader {
+    z-index: 0;
+    height: 0;
+
+}
+
+#transition-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+@keyframes toTop {
+    100% {
+    transform: translateY(0px);
+    }
+}
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: -100vh;
+    animation-duration: 2s;
+    animation-name: toBottom;
+}
+
+@keyframes toBottom {
+    from {
+        margin-bottom: 100vh;
+        height: 100vh;
+    }
+
+    to {
+        margin-bottom: 0vh;
+        height: 0vh;
+    }
+
+}
+
+.orange {
+    background-color: #F46036;
+    animation-delay: 0.5s;
+}
+.iguana {
+    background-color: #77AD78;
+    animation-delay: 0.25s;
+}
+.purple {
+    background-color: #7C616C;
+    animation-delay: 1s;
+}
+.darkLiver {
+    background-color: #544B30;
+}
+.teaGreen {
+    background-color: #C5EBC3;
+}
+
+
+/*For mobile fixing*/
 @media (max-width: 775px) {
     .menu-bar {
         display: block;
@@ -204,85 +354,4 @@ h3 {
     .navAnchor {
         top: 0;
     }
-}
-
-.show {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    padding: 0;
-    background-color: black;
-}
-
-/*Footer CSS*/
-.footer {
-    box-sizing: border-box;
-    background-color: black;
-    height: 45vh;
-    padding: 5vh;
-    display: flex;
-    justify-content: center;
-}
-
-.social-media-links {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
-.social-media-links a {
-    text-decoration: none;
-}
-
-.icon {
-    color: white;
-    font-size: 2em;
-}
-
-
-/*Home Page*/
-.hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/img/hero-small.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.hero-text {
-    text-align: center;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 6em;
-    width: 100vw;
-}
-
-/*Container to center items*/
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 10vh;
-}
-
-/*Link Mods*/
-.cleanLink {
-    text-decoration: none;
-    font-size: 2em;
-}
-
-/*Themes */
-.dark-theme {
-    color: black;
-}
-
-.light-theme {
-    color: white;
 }

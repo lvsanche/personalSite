@@ -48,7 +48,7 @@ h3 {
     font-size: 3em;
     text-align: center;
 }
-.full-view{
+.fullView{
     min-height: 100vh;
     padding: 0 1em;
 }
@@ -81,7 +81,7 @@ h3 {
 	box-sizing: border-box;
 }
 
-.main-nav {
+.mainNav {
     /* width: 100%;
     height: 20vh;
     position: relative;
@@ -114,7 +114,7 @@ h3 {
 }
 
 /*MENU CSS*/
-.nav-links {
+.navLinks {
     display: flex;
     justify-content: space-around;
     width: 60%;
@@ -122,10 +122,10 @@ h3 {
     margin: 0 auto;
 }
 
-.nav-links li {
+.navLinks li {
     display: inline-flex;
 }
-.nav-links a::after {
+.navLinks a::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -138,7 +138,7 @@ h3 {
     transition: transform 250ms;
 }
 	
-.nav-links a:hover::after {
+.navLinks a:hover::after {
 	transform: translateX(-50%) scaleX(1);	
 }
 
@@ -147,7 +147,7 @@ h3 {
     top: -20vh;
 }
 
-.stick-top {
+.desktopMenuScrollAnimation {
     position: fixed;
     top: 0;
     transition: all 0.5s ease;
@@ -157,7 +157,7 @@ h3 {
     height: 10vh;
 }
 
-.menu-bar {
+.menuButton {
     position: fixed;
     font-size: 6vh;
     top: 5vh;
@@ -177,11 +177,11 @@ h3 {
 }
 
 @media (max-width: 775px) {
-    .menu-bar {
+    .menuButton {
         display: block;
     }
 
-    .nav-links {
+    .navLinks {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -199,7 +199,7 @@ h3 {
     h2, h3 {
         font-size: 5em;
     }
-    .social-media-links {
+    .socialMediaLinks {
         font-size: 1.5em;
     }
 
@@ -229,13 +229,13 @@ h3 {
     justify-content: center;
 }
 
-.social-media-links {
+.socialMediaLinks {
     display: flex;
     align-content: center;
     justify-content: space-around;
     flex-direction: column;
 }
-.social-media-links a {
+.socialMediaLinks a {
     text-decoration: none;
 }
 
@@ -246,7 +246,7 @@ h3 {
 
 
 /*Home Page*/
-.hero-image {
+.heroImage {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/img/hero-small.jpg");
     height: 100vh;
     background-size: cover;
@@ -255,7 +255,7 @@ h3 {
     position: relative;
 }
 
-.hero-text {
+.heroText {
     text-align: center;
     position: absolute;
     top: 65%;

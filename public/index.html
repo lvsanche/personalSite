@@ -7,98 +7,103 @@
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed|Muli|Playfair+Display|Poppins" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
-    <body onload="animateLoading()">
-        
-        <div class="loader orange"></div>
-        <div class="loader purple"></div>
-        <div class="loader iguana"></div>
-        <div id="content">
-                <div id="test" class="hero-image">
-                        <div class="hero-text">
-                            Hi, I'm Luis.
-                        </div>
-                    </div>
-                    <div class="navSpacer">
-                        <span class="menu-bar" id="toggle-menu"><i class="fas fa-bars"></i></span>
-                        <nav id="nav" class="main-nav">
-                            <ul id="navLinks" class="nav-links">
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#sideProjects">Side Projects</a></li>
-                                <li><a href="#resume">Resume</a></li>
-                                <li><a href="#footer">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    
-                    <section class="full-view">
-                        <div class="navAnchor" id="about"></div>
-                        <div>
-                            <p class="accent">
-                                I engineer quality into software, I'm a computer engineer working in test. Looking to take the step
-                                and contribute to the world wide web full time.
-                            </p>
-                            
-                            <h2><a class="light-theme" href="background.html">More on Luis</a></h2>
-                            
-                            <h2><a class="light-theme" href="hobbies.html">Outside CS interests</a></h2>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="navAnchor" id="sideProjects"></div>
-                        <!-- <h1>Side Projects</h1> -->
-                        <div class="full-view">
-                            <div class="two-cols">
-                                <h2>Project Kiwi</h2>
-                                <div class="stack">
-                                    <p>
-                                        What started as a fun way to learn React turned into a student process tracking web application that I made for 
-                                        a very special grade school teacher. She mentioned that she was using excel sheets to keep track of what numbers
-                                        her students knew, which letters they could recognize and say in Spanish. I thought to myself, "there has to be 
-                                        a better way, how about creating a whole web app using tools I've never heard of before". And here are the results.
-                                    </p>
-                                    <p>
-                                        My focus was to learn a framework, and produce something that she could use. The focus became simple and fast grade input,
-                                        graphing everything and adding as many metrics that could possibly help improve her teaching and
-                                        show progress over the school year.
-                                    </p>
-                                    <p>Tools Used: React, Redux, CSS</p>
-                                    <a class="light-theme accent" href="https://project-kiwi-0123.firebaseapp.com/">Visit project-kiwi</a>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="full-view">
-                            <div class="two-cols">
-                                <h2 class="light-theme">Project Raspberry</h2>
-                                <div class="stack">
-                                    <p>
-                                        Even though I had created something useful with React and Redux I wanted to learn more, specially inspired by "You Don't Know JS".
-                                        The projects goal is to allow me to easily categorize and save recipes that I find online. I love cooking, cooking allows me
-                                        to nurture and feed the ones I love most and I never lack that most important ingredient.
-                                        I want Project Raspberry to easily add recipes to my meal preping calendar, allow me to aggregate my shopping list for the week and just make the whole shopping and meal planning
-                                        process easier and faster. 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="light-theme">
-                        <div class="navAnchor" id="resume"></div>
-                        <h3><a class="cleanLink light-theme" href="/misc/resume.pdf"><i class="fas fa-file-download"></i> Resume</a></h3>
-                        
-                    </section>
-            
-                    <div class="dark-theme footer" id="footer">
-                        <div class="social-media-links">
-                            <a class="icon" href="https://www.linkedin.com/in/lvsanche/"><i class="fa-fw fab fa-linkedin-in"></i> linkedin.com/in/lvsanche</a>
-                            
-                            <a class="icon" href="https://www.github.com/lvsanche/"><i class="fa-fw fab fa-github-square"></i> github.com/lvsanche</a>
-                            
-                            <a class="icon" href="mailto:luissanchez.1293@gmail.com"><i class="fa-fw fas fa-envelope"></i> luissanchez.1293@gmail.com</a>
-                        </div>
-                    </div>
+    <body>
+        <div id="loader">
+            <div class="loader firstColor"></div>
+            <div class="loader secondColor"></div>
+            <div class="loader thirdColor"></div>
+        </div>
+        <div id="menu-loader">
+            <div class="mLoader firstColor"></div>
+            <div class="mLoader secondColor"></div>
+            <div class="mLoader thirdColor"></div>
         </div>
         
+        <div id="test" class="heroImage">
+            <div class="heroText">
+                Hi, I'm Luis.
+            </div>
+        </div>
+        <div class="navSpacer">
+            <span class="menuButton" id="toggle-menu"><i class="fas fa-bars"></i></span>
+            <nav id="nav" class="mainNav desktopMenuAnimation">
+                <ul id="navLinks" class="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#sideProjects">Side Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <section class="fullView">
+            <div class="navAnchor" id="about"></div>
+            <div>
+                <p class="accent">
+                    I engineer quality into software, I'm a computer engineer working in test. Looking to take the step
+                    and contribute to the world wide web full time.
+                </p>
+                
+                <h2><a class="light-theme" href="background.html">More on Luis</a></h2>
+                
+                <h2><a class="light-theme" href="hobbies.html">Outside CS interests</a></h2>
+            </div>
+        </section>
+        <section>
+            <div class="navAnchor" id="sideProjects"></div>
+            <!-- <h1>Side Projects</h1> -->
+            <div class="fullView">
+                <div class="twoCols">
+                    <h2>Project Kiwi</h2>
+                    <div class="stack">
+                        <p>
+                            What started as a fun way to learn React turned into a student process tracking web application that I made for 
+                            a very special grade school teacher. She mentioned that she was using excel sheets to keep track of what numbers
+                            her students knew, which letters they could recognize and say in Spanish. I thought to myself, "there has to be 
+                            a better way, how about creating a whole web app using tools I've never heard of before". And here are the results.
+                        </p>
+                        <p>
+                            My focus was to learn a framework, and produce something that she could use. The focus became simple and fast grade input,
+                            graphing everything and adding as many metrics that could possibly help improve her teaching and
+                            show progress over the school year.
+                        </p>
+                        <div class="centerContainer">
+                            <a class="light-theme accent" href="https://project-kiwi-0123.firebaseapp.com/">Visit project-kiwi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fullView">
+                <div class="twoCols">
+                    <h2 class="light-theme">Project Raspberry</h2>
+                    <div class="stack">
+                        <p>
+                            Even though I had created something useful with React and Redux I wanted to learn more, specially inspired by "You Don't Know JS".
+                            The projects goal is to allow me to easily categorize and save recipes that I find online. I love cooking, cooking allows me
+                            to nurture and feed the ones I love most and I never lack that most important ingredient.
+                            I want Project Raspberry to easily add recipes to my meal preping calendar, allow me to aggregate my shopping list for the week and just make the whole shopping and meal planning
+                            process easier and faster. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="light-theme">
+            <div class="navAnchor" id="resume"></div>
+            <h3><a class="cleanLink light-theme" href="/misc/resume.pdf"><i class="fas fa-file-download"></i> Resume</a></h3>
+            
+        </section>
+
+        <div class="dark-theme footer" id="footer">
+            <div class="socialMediaLinks">
+                <a class="icon" href="https://www.linkedin.com/in/lvsanche/"><i class="fa-fw fab fa-linkedin-in"></i> linkedin.com/in/lvsanche</a>
+                
+                <a class="icon" href="https://www.github.com/lvsanche/"><i class="fa-fw fab fa-github-square"></i> github.com/lvsanche</a>
+                
+                <a class="icon" href="mailto:luissanchez.1293@gmail.com"><i class="fa-fw fas fa-envelope"></i> luissanchez.1293@gmail.com</a>
+            </div>
+        </div>
     </body>
     <script src="/js/main.js"></script>
 </html>

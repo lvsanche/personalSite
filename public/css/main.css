@@ -9,7 +9,7 @@ body {
     background: #544B3D;
     color: #FCF7F8;
     margin: 0;
-    font-size: 2vw;
+    font-size: 12px;
     overflow-x: hidden;
     font-family: 'Saira Extra Condensed','Poppins', 'Muli', sans-serif;
     letter-spacing: 1px;
@@ -27,7 +27,7 @@ div, main, header {
 }
 
 p {
-    font-size: 1em;
+    font-size: 2em;
     line-height: 1.25;
     margin: 0.25em;
 }
@@ -54,19 +54,21 @@ a{
 }
 
 /*Sections*/
-.full-view{
-    /* min-height: 100vh; */
-    padding: 0 5vw;
+.fullView{
+    width: 75%;
+    margin: 0 auto;
 }
 
 .accent {
     border-left: 5px solid #7CFFC4;
     background: rgba(182, 175, 164, 0.6);
     padding: 0.25em;
+    margin: 1em;
+    font-size: 2em;
 }
 
 /*Navigation*/
-.nav-links {
+.navLinks {
     display: flex;
     justify-content: space-around;
     width: 60%;
@@ -74,12 +76,13 @@ a{
     margin: 0 auto;
 }
 
-.nav-links li {
+.navLinks li {
 	display: inline-flex;
 }
 
-.nav-links a {
-	position: relative;
+.navLinks a {
+    position: relative;
+    font-size: 2em;
 	padding: 1rem 0 0.5rem;
 	margin: 0 1.5rem;
 	color: white;
@@ -87,7 +90,7 @@ a{
 	text-transform: uppercase;
 }
 
-.nav-links a::after {
+.navLinks a::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -100,64 +103,104 @@ a{
     transition: transform 250ms;
 }
 
-.nav-links a:hover::after {
+.navLinks a:hover::after {
 	transform: translateX(-50%) scaleX(1);
 }
 
 .navSpacer{
-    height: 10vh;
+    height: 5em;
 }
 
 .navAnchor {
     position: relative;
-    top: -12vh;
+    top: -9em;
 }
 
-.main-nav {
-    height: 10vh;
-    width: 100vw;
+.mainNav {
+    height: 8em;
+    width: 100%;
     position: absolute;
-    bottom: 0vh;
+    top: 100%;
+}
+.navPosAfterAnimation {
+    top: 90%;
+}
+
+.desktopMenuAnimation {
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-name: animateDesktopMenu;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateDesktopMenu {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 90%;
+    }
 }
 
 /*Menu for mobile*/
-.menu-bar {
+.menuButton {
     position: fixed;
-    font-size: 6vh;
-    top: 5vh;
-    right: 4vw;
+    font-size: 2.5em;
+    top: 0.5em;
+    right: 0.4em;
     display: none;
     z-index: 5;
 }
 
 
 /*Hero Image*/
-.hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/img/hero-small.jpg");
-    height: 100vh;
+.heroImage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.10)), url("/img/hero-small.jpg");
+    height: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
-    transition-property: display;
-    transition-timing-function: linear;
-    transition-duration: 10s;
 }
 
-#content {
-    display: none;
-    
-}
-
-.hero-text {
+.heroText {
     text-align: center;
     position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
-    font-size: 6em;
     width: 100vw;
+    top: 100%;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-name: animateHeroTextDesktop;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateHeroTextDesktop {
+    0% {
+        font-size: 0em;
+        top: 100%;
+    }
+    1% {
+        font-size: 6em;
+    }
+    100% {
+        top: 65%;
+        font-size: 6em;
+    }
+}
+
+@keyframes animateHeroTextMobile {
+    0% {
+        font-size: 0em;
+        top: 100%;
+    }
+    1% {
+        font-size: 4em;
+    }
+    100% {
+        top: 65%;
+        font-size: 4em;
+    }
 }
 
 /*Header CSS*/
@@ -173,15 +216,16 @@ a{
 .footer {
     box-sizing: border-box;
     background-color: black;
-    height: 45vh;
-    padding: 5vh;
+    height: 45%;
+    padding: 3em;
     display: flex;
     justify-content: center;
 }
 
 /*List modifications*/
-.center {
-    text-align: center;
+.centerContainer {
+    display: flex;
+    justify-content: center;
 }
 
 .cleanLink {
@@ -190,168 +234,244 @@ a{
 }
 
 /*Social media links*/
-.social-media-links {
+.socialMediaLinks {
     display: flex;
     align-content: center;
     justify-content: space-around;
     flex-direction: column;
 }
-.social-media-links a {
+.socialMediaLinks a {
+    font-size: 3em;
     text-decoration: none;
 }
 
-.stick-top {
+.desktopMenuScrollAnimation {
     position: fixed;
-    top: 0;
-    transition-property: background; 
-    transition-duration: 2s;
-    transition-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: animateDesktopNavScroll;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
 }
 
-/*Two cols */
-.two-cols {
-    display: flex;
-    margin: 10vh 0;
+@keyframes animateDesktopNavScroll {
+    from{
+        top: -10%;
+    }
+    to {
+        top: 0;
+    }
 }
 
-.two-cols h2 {
+/*Two cols */
+.twoCols {
+    display: flex;
+    margin: 8em 0;
+}
+
+.twoCols h2 {
     flex: 1 0 20vw;
     font-size: 2em;
     text-align: left;
     margin: auto;
 }
 
-.two-cols .stack {
-    flex: 1 0 40vw;
-}
-
-.animate path {
-    transform: translateY(-800px);
-}
-.animate path:nth-of-type(1) {
-    animation: toTop 500ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
-}
-
-.animate path:nth-of-type(2) {
-    animation: toTop 550ms 75ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
-}
-
-.animate path:nth-of-type(3) {
-    animation: toTOP 600ms 150ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
-}
-
-.animate path:nth-of-type(4) {
-    animation: toTop 650ms 225ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
-}
-
-.animate path:nth-of-type(5) {
-    animation: toTop 700ms 300ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
-}
-
-.animate path:nth-of-type(6) {
-    animation: toTop 750ms 375ms cubic-bezier(.53,-0.38,.81,.18) forwards;	
-}
-
-#whole {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #544B30;
-}
-.removeLoader {
-    z-index: 0;
-    height: 0;
-
-}
-
-#transition-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 10;
-}
-
-@keyframes toTop {
-    100% {
-    transform: translateY(0px);
-    }
+.twoCols .stack {
+    flex: 1 0 60%;
 }
 
 .loader {
     width: 100vw;
     height: 100vh;
     position: relative;
-    top: -100vh;
-    animation-duration: 2s;
+    top: 0vh;
+    animation-duration: 1s;
     animation-name: toBottom;
+    animation-fill-mode: forwards;
 }
 
 @keyframes toBottom {
-    from {
+    0%{
         margin-bottom: 100vh;
+    }
+
+    75% {
+        margin-bottom: 0vh;
         height: 100vh;
     }
-
-    to {
-        margin-bottom: 0vh;
+    
+    100% {
         height: 0vh;
     }
-
 }
 
-.orange {
-    background-color: #F46036;
-    animation-delay: 0.5s;
+
+/*Colors selected*/
+.thirdColor {
+    background-color: #544B30;
+    animation-delay: 0.2s;
 }
-.iguana {
-    background-color: #77AD78;
-    animation-delay: 0.25s;
+.secondColor {
+    background-color: #7CFFC4;
+    animation-delay: 0.1s;
 }
-.purple {
-    background-color: #7C616C;
-    animation-delay: 1s;
+.firstColor {
+    background-color: #3066BE;
+    animation-delay: 0s;
 }
 .darkLiver {
     background-color: #544B30;
+    animation-delay: 1s;
 }
 .teaGreen {
     background-color: #C5EBC3;
+    animation-delay: 0.75s;
 }
 
 
 /*For mobile fixing*/
 @media (max-width: 775px) {
-    .menu-bar {
+    body {
+        font-size: 18px;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    .menuButton {
         display: block;
     }
-
-    .nav-links {
-        display: none;
+    p {
+        font-size: 2em;
+    }
+    .navLinks {
+        display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 0;
+        background-color: black;
         position: fixed;
+        bottom: -100%;
+        z-index: 4;
+    }
+    .navLinksRev {
+        transition-delay: 0s;
+    }
+    .mLoader {
+        display: block;
+        width: 100vw;
+        height: 0vh;
+        position: fixed;
+        bottom: -10%;
+        transition: height 0.5s, bottom 0.5s;
+        z-index: 1;
     }
 
     p {
-        font-size: 4em;
         line-height: 1.5;
     }
-    h1 {
-        font-size: 6em;
+
+    .socialMediaLinks a {
+        font-size: 1em;
     }
-    h2, h3 {
-        font-size: 5em;
+
+    .navSpacer {
+        height: 2em;
     }
-    .social-media-links {
-        font-size: 1.5em;
+
+    .navPosAfterAnimation {
+        top: 0;
     }
 
     .navAnchor {
-        top: 0;
+        top: -1em;
     }
+
+    .desktopMenuScrollAnimation {
+        background: none;
+    }
+
+    .twoCols{
+        flex-direction: column;
+    }
+    .twoCols h2 {
+        font-size: 5em;
+    }
+
+    .fullView {
+        width: 100%;
+    }
+
+    .heroText {
+        text-align: center;
+        position: absolute;
+        width: 100vw;
+        animation-name: animateHeroTextMobile;
+    }
+}
+
+.openMobileMenu {
+    animation-name: animateOpenMobileMenu;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+}
+
+@keyframes animateOpenMobileMenu {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.closeMobileMenu {
+    animation-name: animateCloseMobileMenu;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+    bottom: 0;
+}
+
+@keyframes animateCloseMobileMenu {
+    0% {
+        height: 100%;
+        bottom: 0;
+    }
+    99% {
+        bottom: 0;
+        height: 0;
+    }
+    100% {
+        bottom: -100%;
+    }
+}
+
+.mLoader.show:nth-child(1){
+    transition-delay: 0s;
+    z-index: 1;
+}
+.mLoader.show:nth-child(2){
+    transition-delay: 0.1s;
+    z-index: 2;
+}
+.mLoader.show:nth-child(3){
+    transition-delay: 0.2s;
+    z-index: 3;
+}
+
+.mLoader:nth-child(1){
+    transition-delay: 0.3s;
+    z-index: 1;
+}
+.mLoader:nth-child(2){
+    transition-delay: 0.2s;
+    z-index: 2;
+}
+.mLoader:nth-child(3){
+    transition-delay: 0.1s;
+    z-index: 3;
+}
+
+.show {
+    bottom: 0;
 }

@@ -55,7 +55,7 @@ a{
 
 /*Sections*/
 .fullView{
-    width: 75%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -121,6 +121,9 @@ a{
     width: 100%;
     position: absolute;
     top: 100%;
+}
+.sideNav {
+    top: 10%;
 }
 .navPosAfterAnimation {
     top: 90%;
@@ -396,7 +399,7 @@ a{
     }
 
     .fullView {
-        width: 100%;
+        width: 90%;
     }
 
     .heroText {

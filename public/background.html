@@ -4,44 +4,64 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css" />
         <link rel="shortcut icon" type="image/png" href="/img/LVSFavicon.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed|Muli|Playfair+Display|Poppins" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
     <body>
-
-        <div id="test" class="heroImage">
-            <div class="heroText">
-                Hi, I'm Luis.
-            </div>
+        <div id="loader">
+            <div class="loader firstColor"></div>
+            <div class="loader secondColor"></div>
+            <div class="loader thirdColor"></div>
+        </div>
+        <div id="menu-loader">
+            <div class="mLoader firstColor"></div>
+            <div class="mLoader secondColor"></div>
+            <div class="mLoader thirdColor"></div>
+        </div>
+        <div id="test">
         </div>
         <div class="navSpacer">
             <span class="menuButton" id="toggle-menu"><i class="fas fa-bars"></i></span>
-            <nav id="nav" class="mainNav">
+            <nav id="nav" class="sideNav mainNav navPosAfterAnimation desktopMenuScrollAnimation">
                     <div id="navLinks" class="navLinks">
                         <a href="/">Home</a>
                         <a href="#resume">Resume</a>
+                        <a href="#hobbies">Hobbies</a>
+                        <a href="#footer">Contact</a>
                     </div>
             </nav>
         </div>
         
         <section class="fullView">
             <div class="navAnchor" id="about"></div>
-            <h1>More Background</h1>
+            <h2>More Background</h2>
             <div>
                 <p>
-                    I'm Luis. I'm a 24-year-old computer engineer working in software testing. 
-                    I conduct functional testing alongside automated testing on web and mobile apps. 
-                    However, now I am looking to take those experiences and start creating. 
-                    I may not have any real-world work experience in web development but I will not give up until I get there.
-                </p>    
-                <p>
-                    My work experince is diverse, I started working collaboratively with others conducting research during my time
-                    at University of California San Diego. I was part of the REACToR group that keeps working on improving cloud
-                    computing services with the user of optical circuit switches. I learned many things from my tutors and took that experience
-                    with me to my summer internship in 2015 where I worked at Datastax. My first internship was interesting in that
+                    My work experince is diverse, I started working collaboratively with others in my research during my time
+                    at the University of California San Diego. I was part of the REACToR reasearch group that keeps working on improving cloud
+                    computing services with the integration of optical circuit switches to produce hybrid datacenters. I learned many things from my tutors and took that experience
+                    with me to my summer internship where I worked at Datastax. My internship experience was interesting in that
                     all my colleages and managers worked remotely. I learned how to become a more efficient communicator and I practiced
                     being self driven. 
-
+                </p>
+                <p>
                     After those great experiences, I continued school and research with an optical lasers lab at UCSD. I was tasked with 
+                    producing a framework written in Python that would enable my lab partner, to run tests using multiple instruments and 
+                    gather data. I looked to take it further and aid in the graphing of such data by incorporating libraries like 
+                    Matplotlib and Numpy.
+                </p>
+                    
+                <p>
+                    Close to the end of my tenure at UCSD, I was afforded the opportunity to study abroad for a semester. After some
+                    consideration I chose to study at Lund University in Sweden, about 1 hour train ride from Copenhagen, Denmark. 
+                    Lund University is a historically known engineering university with a superb computer engineering department. 
+                    I wanted to experience learning computer science elsewhere in the world and was excited to take an intro course in
+                    artificial intelligence and a course on functional programming.
+                </p>
+                <p>
+                    I met many people during my six months in Sweden and travelling around Europe. I got a glipse of a much
+                    larger world, a world that should be more connected. My goal is to aid in that process. I believe
+                    there is no greater 
                 </p>
                 <h2>Mission</h2>
                 <p>
@@ -52,7 +72,63 @@
                     using Selenium and Appium along side functional testing. I've learned enough now that I know my 
                     new mission in life is to get to a collaborative space where I can make the better a better place.
                 </p>
-                <h2><a class="light-theme" href="hobbies.html">Outside CS interests</a></h2>
+                
+            </div>
+        </section>
+
+        <section class="fullView">
+            <div class="navAnchor" id="about"></div>
+            <div>
+                <h2>Food & Drinks</h2>
+                <p>
+                    Anything that has to do with creating, even better if I can eat it or drink it.
+                    My friends and I make beer every few months, I'm a big fan of hoppy beers. Belgium is in my top 3 
+                    cities I visited during my studies abroad for the diversity alone. Food is another great thing I experienced abroad,
+                    Even with all the walking I did, I gained a few pounds during my travels. 
+                </p>
+                <p>
+                    My love for cooking does not end in the kitchen, in the summer 2017 I decided I wanted
+                    to smoke a turkey for Thanksgiving. So I went down to the local scrap yard and after sourcing a 
+                    free 55 gallon steel drum from Craiglist, I got started on an offset smoker. 
+                    Astetics of the smoker are not the best at the moment, but I have a group of friends that can attest
+                    to the delicious juicy ribs and smokey pulled pork that the smoker can make. This year's goal is to complete 
+                    the look and improve some of the faults that became apparent after a few smoking sessions.
+                </p>
+                <p>
+                    Cooking daily for dinner and next day's lunch is my mediation for the day. I love it,
+                    I strive to improve every time I turn the stove on. With that comes the need to go shopping
+                    every week. There's nothing lazier than me when it comes to that. I aim to smooth that over
+                    with my latest "work in progress" project, <strong>Project Raspberry</strong>. Meal planning and 
+                    simple shopping lists is the goal. 
+                </p>
+                <div class="centerContainer">
+                    <a class="light-theme accent" href="beerDirectory.html">Beer Recipes</a>
+                    <a class="light-theme accent" href="https://raspberry.luissanchez.us">Learn more about Proj. Raspberry</a>
+                </div>
+            <div>
+            <div>
+                <h2>Cars</h2>
+                <p>
+                    Cliche as it may be, I love getting my hands dirty, it's a good change of pace to the virtual world I work in.
+                    Whether it trying to get a project car working or helping fix a relative or friend's car, I will be there.
+                    My parent's driveway is dubbed the "Sanchez Auto Shop" by all my friends.
+                </p>
+                <p>
+                    Back in 2015 I had a 1981 Toyota Corolla parked in the driveway for a few months, while I took apart the engine.
+                    I changed every part of that motor, that engine will certainly drive for another 34 years.
+                    The new better running engine soon wrecked havoc on other components and the transmission blew out on me
+                    while I was driving in the highway. That also got fixed at the Sanchez Auto Shop.
+                </p>
+                <p>
+                    As the Corolla was a weekend project, I started to learn how to weld in order to fabricate parts on it. I made 
+                    a custom set of coil overs to lower the car and give it a face lift. Sadly, after getting back from studying abroad
+                    I decided to sell it before the next smog inspection. California doesn't like old cars with outdated emissions and 
+                    the first time I went through it was enough to not make me deal with it again.
+                </p>
+                <p>
+                    Now I occasionally browse Craiglist and other market places for future projects. Perhaps something pre-1975
+                    or some poor old beaten Porsche in need of love and care.  
+                </p>
             </div>
         </section>
 

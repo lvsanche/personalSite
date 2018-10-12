@@ -67,7 +67,7 @@ section {
 /*Sections*/
 .fullView{
     width: 65%;
-    margin: 0 auto;
+    margin: 0 auto 5em;
 }
 
 .accent {
@@ -335,7 +335,7 @@ section {
     animation-delay: 0.1s;
 }
 .firstColor {
-    background-color: #291711;
+    background-color: #336699;
     animation-delay: 0s;
 }
 .darkLiver {
@@ -346,12 +346,53 @@ section {
     background-color: #C5EBC3;
     animation-delay: 0.75s;
 }
-
+ 
 .zinnColor{
     background-color: #291711;
+}  
+.crimson {
+    background-color: #E3170A;
+}
+
+.lazuli {
+    background-color: #336699;
+}
+
+.aqua {
+    background-color: #7CFFC4;
 }
 
 
+
+/*Drawers*/
+.recipeDrawer {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.recipeDrawer label {
+    padding: 0.5em;
+    font-size: 2em;
+    display: block;
+    font-weight: 900;
+    color: white;
+}
+.recipeDrawer > label {
+    color: #291711;
+}
+.recipeDrawer > label:hover {
+    cursor: pointer;
+}
+.recipeContainer {
+    color: white;
+    padding: 1em;
+    height: 0;
+    display: none;
+}
+
+.iconStyle {
+    border-radius: 25em;
+    float: right;
+    padding: 0.25em;
+}
 
 /*For mobile fixing*/
 @media (max-width: 775px) {
@@ -406,7 +447,7 @@ section {
     }
 
     .navAnchor {
-        top: -1em;
+        top: 0;
     }
 
     .desktopMenuScrollAnimation {
@@ -415,6 +456,7 @@ section {
 
     .twoCols{
         flex-direction: column;
+        margin: 0;
     }
     .twoCols h2 {
         font-size: 5em;
@@ -429,6 +471,10 @@ section {
         position: absolute;
         width: 100vw;
         animation-name: animateHeroTextMobile;
+    }
+
+    .centerContainer {
+        flex-direction: column;
     }
 }
 

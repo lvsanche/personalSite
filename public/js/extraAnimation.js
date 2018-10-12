@@ -57,6 +57,7 @@ function handleNavButtonPress() {
         document.getElementById('toggle-menu').innerHTML = "<i class='fas fa-bars'></i>";
     }
     else {
+        
         hideLoader(false);
         navLinks.classList.add('show');
         navLinks.classList.remove('navLinksRev');
@@ -73,10 +74,34 @@ function handleNavButtonPress() {
         document.getElementById('toggle-menu').innerHTML = '<i class="fas fa-times"></i>';
         console.log('showing')
     }
+    
 }
 
 window.addEventListener('load', function (){
     window.addEventListener('scroll', handleNavBarWhenScrolling);
 })
+
+function handleRecipeDrawer() {
+    var recipeContainer = document.getElementById('recContainer');
+    
+    if(recipeContainer.classList.contains('drawerHidden')){
+        recipeContainer.style.display = 'block';
+        recipeContainer.style.height = 'auto';
+        recipeContainer.classList.remove('drawerHidden');
+        document.getElementById('drawerToggle').classList.remove('fa-plus');
+        document.getElementById('drawerToggle').classList.add('fa-minus');
+        console.log('Click and none')
+    }
+    else {
+        recipeContainer.style.display = 'none';
+        recipeContainer.style.height = 0;
+        recipeContainer.classList.add('drawerHidden');
+
+        document.getElementById('drawerToggle').classList.remove('fa-minus');
+        document.getElementById('drawerToggle').classList.add('fa-plus');
+    }
+}
+
+document.getElementById('toggleRecipe').addEventListener('click', handleRecipeDrawer);
 
 document.getElementById('toggle-menu').addEventListener('click', handleNavButtonPress);

@@ -273,6 +273,13 @@ section {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
 }
 
+.jobPosition label {
+    font-size: 2em;
+}
+.jobPosition p {
+    font-size: 1em;
+}
+
 @keyframes animateDesktopNavScroll {
     from{
         top: -10%;

@@ -99,6 +99,7 @@ section {
 
 .navLinks a {
     position: relative;
+    width: 100%;
     font-size: 2rem;
 	padding: 1rem 0 0.5rem;
 	margin: 0 1.5rem;
@@ -289,6 +290,9 @@ section {
 }
 
 /*Job Position section*/
+.jobPosition {
+    padding: 5%;
+}
 .jobPosition h2,
 .jobPosition h3 {
     text-align: left;
@@ -489,7 +493,7 @@ section {
     }
   
     .socialMediaLinks a {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .navSpacer {
@@ -511,13 +515,24 @@ section {
     .twoCols{
         flex-direction: column;
         margin: 0;
+        padding: 5%;
     }
+
+    .altMainColor:nth-child(even) {
+        background-color: #665B4A;
+    }
+
     .twoCols h2 {
         font-size: 4rem;
     }
 
     .fullView {
-        width: 90%;
+        width: 100%;
+    }
+
+    /*FOOTER mod*/
+    .footer {
+        padding: 1rem;
     }
 
     .heroText {

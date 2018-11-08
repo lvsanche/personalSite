@@ -186,6 +186,7 @@ section {
     margin-top: 100vh;
     animation-name: animateHeroImageDesktop;
     animation-fill-mode: forwards;
+    font-size: 1rem;
 }
 
 @keyframes animateHeroImageDesktop {
@@ -229,11 +230,11 @@ section {
         top: 100%;
     }
     1% {
-        font-size: 4rem;
+        font-size: 4em;
     }
     100% {
         top: 65%;
-        font-size: 4rem;
+        font-size: 4em;
     }
 }
 

@@ -4,12 +4,14 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
-http.createServer(app).listen(8080, '192.168.0.168');
 
 
+var ip = '192.168.30.10';
+http.createServer(app).listen(8080, ip);
+
+console.log('Listening on '+ip +":8080");
 function app (req, res){
     var filePath = req.url;
-    console.log(filePath);
     if(filePath === '/'){
         filePath = '/index.html';
     }
@@ -35,11 +37,11 @@ function app (req, res){
             '.svg': 'application/image/svg+xml'
         };
 
-        console.log('before: '+filePath)
+       
         var contentType = mimeTypes[extname] || 'application/octet-stream';
         filePath = path.resolve(__dirname, '../public'+filePath);
 
-        console.log('Generic: '+  filePath);
+        
         fs.readFile(filePath, function(error, content) {
             if (error) {
                 if(error.code == 'ENOENT') {
